@@ -61,8 +61,8 @@
     <main>
       <section class="page page-portfolio active" data-page-panel="portfolio">
         <div class="portfolio-alt-background" aria-hidden="true">
-          <video class="portfolio-alt-effect-video" muted loop playsinline preload="none">
-            <source data-src="assets/effects/portfolio-alt-hover-effect.mp4" type="video/mp4" />
+          <video class="portfolio-alt-effect-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/effects/portfolio-alt-hover-effect.mp4" type="video/mp4" />
           </video>
         </div>
         <section class="intro portfolio-intro" aria-labelledby="portfolio-title">
@@ -73,19 +73,19 @@
                 <span class="hello-text-face hello-text-back">Эй-эй, привет!</span>
               </span>
               <span class="hello-photo" aria-hidden="true">
-                <img loading="eager" decoding="async" fetchpriority="high" class="hello-photo-pixel" src="assets/portrait-default-20260819.svg" alt="" />
-                <img loading="eager" decoding="async" class="hello-photo-pixel hello-photo-blink" src="assets/portrait-blink-20260819.svg" alt="" />
-                <img loading="eager" decoding="async" class="hello-photo-pixel hello-photo-wave hello-photo-wave-1" src="assets/portrait-wave-20260819c-1.svg" alt="" />
-                <img loading="eager" decoding="async" class="hello-photo-pixel hello-photo-wave hello-photo-wave-2" src="assets/portrait-wave-20260819c-2.svg" alt="" />
-                <img loading="eager" decoding="async" class="hello-photo-pixel hello-photo-wave hello-photo-wave-3" src="assets/portrait-wave-20260819c-3.svg" alt="" />
-                <img loading="lazy" decoding="async" class="hello-photo-alt" src="assets/portfolio-alt-portrait.png" alt="" />
+                <img class="hello-photo-pixel" src="assets/portrait-default-20260819.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-blink" src="assets/portrait-blink-20260819.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-1" src="assets/portrait-wave-20260819c-1.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-2" src="assets/portrait-wave-20260819c-2.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-3" src="assets/portrait-wave-20260819c-3.svg" alt="" />
+                <img class="hello-photo-alt" src="assets/portfolio-alt-portrait.png" alt="" />
               </span>
             </h1>
             <p>
               Я UX/UI‑дизайнер с 3+&nbsp;лет опыта в B2C. Работала с e‑commerce
               проектами, личными кабинетами, программами лояльности и лендингами
             </p>
-            <img loading="lazy" decoding="async" class="portfolio-alt-signal" src="assets/portfolio-alt-signal.svg" alt="" aria-hidden="true" />
+            <img class="portfolio-alt-signal" src="assets/portfolio-alt-signal.svg" alt="" aria-hidden="true" />
           </div>
           <div class="puzzle-layer" aria-hidden="true">
             <div class="puzzle-piece puzzle-piece-black"><span class="puzzle-label">участник дизайн-клуба Creative Sparks</span></div>
@@ -114,7 +114,7 @@
                   <span class="weather-phone-button weather-phone-volume-down" aria-hidden="true"></span>
                   <span class="weather-phone-button weather-phone-side" aria-hidden="true"></span>
                   <div class="weather-phone-screen">
-                    <iframe class="weather-sun-frame" data-src="widgets/sun/index.html?v=94" title="Weather widget: солнце" loading="lazy"></iframe>
+                    <iframe class="weather-sun-frame" src="widgets/sun/index.html?v=94" title="Weather widget: солнце" loading="eager"></iframe>
                   </div>
                   <div class="weather-status-bar" aria-hidden="true">
                     <span class="weather-status-time">09:47</span>
@@ -144,7 +144,7 @@
                   <span class="weather-phone-button weather-phone-side" aria-hidden="true"></span>
                   <div class="weather-phone-screen">
                     <div class="weather-widget-embed">
-                      <iframe data-src="widgets/rain/index.html?v=94" title="Weather widget: дождь" loading="lazy"></iframe>
+                      <iframe src="widgets/rain/index.html?v=94" title="Weather widget: дождь" loading="eager"></iframe>
                     </div>
                   </div>
                   <div class="weather-status-bar" aria-hidden="true">
@@ -172,7 +172,7 @@
               <article class="challenge-card pomodoro-card" aria-label="Pomodoro timer">
                 <span class="tag tag-mint">Pomodoro timer</span>
                 <div class="pomodoro-video-frame">
-                  <video data-src="assets/pomodoro-timer.mp4" muted loop playsinline preload="none"></video>
+                  <video src="assets/pomodoro-timer.mp4" autoplay muted loop playsinline preload="metadata"></video>
                 </div>
               </article>
             </div>
@@ -183,7 +183,7 @@
               <h3>Программа лояльности &amp; Личный кабинет</h3>
               <p>Ramayana Water Park <span></span> 2024–2025</p>
               <div class="case-image case-white">
-                <div class="case-main"><div class="case-main-viewport"><img loading="lazy" decoding="async" src="assets/case-ramayana-dashboard.jpg" alt="" /></div></div>
+                <div class="case-main"><div class="case-main-viewport"><img src="assets/case-ramayana-dashboard.jpg" alt="" /></div></div>
               </div>
             </article>
 
@@ -193,7 +193,7 @@
               <div class="case-image case-white case-sustainability-cover">
                 <div class="case-mark-formelle-frame case-sustainability-frame">
                   <div class="case-sustainability-viewport">
-                    <video data-src="assets/sustainability-cover-video.mp4" muted loop playsinline preload="none" data-playback-rate="1.2"></video>
+                    <video src="assets/sustainability-cover-video.mp4" autoplay muted loop playsinline preload="metadata" data-playback-rate="1.2"></video>
                   </div>
                 </div>
               </div>
@@ -205,7 +205,7 @@
               <div class="case-image case-white case-mark-formelle-cover">
                 <div class="case-mark-formelle-frame">
                   <div class="case-mark-formelle-viewport">
-                    <video data-src="assets/mark-formelle-cover-video.mp4" muted loop playsinline preload="none"></video>
+                    <video src="assets/mark-formelle-cover-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
                   </div>
                 </div>
               </div>
@@ -215,7 +215,7 @@
               <h3>Дизайн-система Ramayana</h3>
               <p>Ramayana Water Park <span></span> 2024–2026</p>
               <div class="case-image case-white case-design-system-cover">
-                <img loading="lazy" decoding="async" src="assets/case-design-system-cover-ramayana.png" alt="" />
+                <img src="assets/case-design-system-cover-ramayana.png" alt="" />
               </div>
             </article>
 
@@ -243,32 +243,32 @@
         </section>
 
         <section class="photo-grid" aria-label="Фотографии">
-          <figure class="photo-tile" style="--x: 0; --y: 0; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-01.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 0; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-02.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 0; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-03.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 699.785; --w: 456; --h: 729.67"><img loading="lazy" decoding="async" src="assets/photo-06.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 699.785; --w: 924; --h: 1393.67"><img loading="lazy" decoding="async" src="assets/photo-05a.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 1441.455; --w: 456; --h: 652"><img loading="lazy" decoding="async" src="assets/photo-04.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 2105.455; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-09.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 2105.455; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-07.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 2105.455; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-08.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 2805.24; --w: 924; --h: 1393.67"><img loading="lazy" decoding="async" src="assets/photo-11.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 2805.24; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-12.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 3508.075; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-19.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 4210.91; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-21a.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 4210.91; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-10.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 4210.91; --w: 456; --h: 687.785"><img loading="lazy" decoding="async" src="assets/photo-20.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 4910.695; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-16a.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 5607.322; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-14.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 456; --y: 6303.948; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-13.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 6303.948; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-25.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 7714.948; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-24.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 924; --y: 7714.948; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-17.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 8408.605; --w: 456; --h: 682"><img loading="lazy" decoding="async" src="assets/photo-29.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 468; --y: 8408.605; --w: 924; --h: 1381.253"><img loading="lazy" decoding="async" src="assets/photo-26.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 9105.403; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-27.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 0; --y: 9801.858; --w: 924; --h: 1381.253"><img loading="lazy" decoding="async" src="assets/photo-28.jpg" alt="" /></figure>
-          <figure class="photo-tile" style="--x: 936; --y: 10498.484; --w: 456; --h: 681.657"><img loading="lazy" decoding="async" src="assets/photo-31.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-01.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-02.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-03.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 699.785; --w: 456; --h: 729.67"><img src="assets/photo-06.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 699.785; --w: 924; --h: 1393.67"><img src="assets/photo-05a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 1441.455; --w: 456; --h: 652"><img src="assets/photo-04.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-09.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-07.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-08.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 2805.24; --w: 924; --h: 1393.67"><img src="assets/photo-11.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 2805.24; --w: 456; --h: 687.785"><img src="assets/photo-12.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 3508.075; --w: 456; --h: 687.785"><img src="assets/photo-19.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-21a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-10.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-20.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 4910.695; --w: 456; --h: 681.657"><img src="assets/photo-16a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 5607.322; --w: 456; --h: 681.657"><img src="assets/photo-14.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 456; --y: 6303.948; --w: 456; --h: 681.657"><img src="assets/photo-13.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 6303.948; --w: 456; --h: 681.657"><img src="assets/photo-25.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 7714.948; --w: 456; --h: 681.657"><img src="assets/photo-24.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 924; --y: 7714.948; --w: 456; --h: 681.657"><img src="assets/photo-17.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 8408.605; --w: 456; --h: 682"><img src="assets/photo-29.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 8408.605; --w: 924; --h: 1381.253"><img src="assets/photo-26.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 9105.403; --w: 456; --h: 681.657"><img src="assets/photo-27.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 9801.858; --w: 924; --h: 1381.253"><img src="assets/photo-28.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 10498.484; --w: 456; --h: 681.657"><img src="assets/photo-31.jpg" alt="" /></figure>
         </section>
       </section>
 
@@ -296,7 +296,7 @@
           </div>
 
           <div class="loyalty-shot loyalty-shot-hero">
-            <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-hero-hq.png" alt="Личный кабинет программы лояльности Ramayana" />
+            <img class="loyalty-case-composite" src="assets/loyalty-case-hero-hq.png" alt="Личный кабинет программы лояльности Ramayana" />
           </div>
         </section>
 
@@ -323,7 +323,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-shot-points">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-points-hq.png" alt="Личный кабинет Ramayana: баллы, квесты и описание программы" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-points-hq.png" alt="Личный кабинет Ramayana: баллы, квесты и описание программы" />
         </section>
 
         <section class="loyalty-text-section">
@@ -337,7 +337,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-shot-levels">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-levels-hq.png" alt="Уровни программы лояльности" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-levels-hq.png" alt="Уровни программы лояльности" />
         </section>
 
         <section class="loyalty-text-section">
@@ -353,11 +353,11 @@
         </section>
 
         <section class="loyalty-shot loyalty-shot-dashboard">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-dashboard-hq.png" alt="Главный экран личного кабинета Ramayana" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-dashboard-hq.png" alt="Главный экран личного кабинета Ramayana" />
         </section>
 
         <section class="loyalty-shot loyalty-shot-entry">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-entry-hq.png" alt="Точки входа в программу лояльности" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-entry-hq.png" alt="Точки входа в программу лояльности" />
           <span class="loyalty-entry-emoji loyalty-entry-emoji-web" aria-hidden="true">🎟️</span>
           <span class="loyalty-entry-emoji loyalty-entry-emoji-park" aria-hidden="true">📱</span>
           <span class="loyalty-entry-emoji loyalty-entry-emoji-checkout" aria-hidden="true">🧾</span>
@@ -371,7 +371,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-screen-shot loyalty-shot-quests">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-quests-hq.png" alt="Quests" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-quests-hq.png" alt="Quests" />
         </section>
 
         <section class="loyalty-text-section">
@@ -385,7 +385,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-screen-shot loyalty-shot-free-photo">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-free-photo-hq.png" alt="Free photos" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-free-photo-hq.png" alt="Free photos" />
         </section>
 
         <section class="loyalty-text-section">
@@ -399,7 +399,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-screen-shot loyalty-shot-payment-history">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-payment-history-hq.png" alt="Payment history" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-payment-history-hq.png" alt="Payment history" />
         </section>
 
         <section class="loyalty-text-section">
@@ -413,11 +413,11 @@
         </section>
 
         <section class="loyalty-shot loyalty-shot-accompanying">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-family-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-family-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
         </section>
 
         <section class="loyalty-shot loyalty-shot-groups">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-groups-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-groups-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
         </section>
 
         <section class="loyalty-text-section">
@@ -428,7 +428,7 @@
         </section>
 
         <section class="loyalty-shot loyalty-shot-final">
-          <img loading="lazy" decoding="async" class="loyalty-case-composite" src="assets/loyalty-case-mobile-hq.png" alt="Адаптивные экраны личного кабинета Ramayana" />
+          <img class="loyalty-case-composite" src="assets/loyalty-case-mobile-hq.png" alt="Адаптивные экраны личного кабинета Ramayana" />
         </section>
 
         <a class="project-back" href="#portfolio" aria-label="Вернуться к проектам">
@@ -467,7 +467,7 @@
           </div>
           <div class="mf-flow mf-cover-flow">
             <div class="mf-cover-video-frame" aria-label="Флоу бронирования Mark Formelle">
-              <video data-src="assets/mark-formelle-cover-video.mp4" muted loop playsinline preload="none"></video>
+              <video src="assets/mark-formelle-cover-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
             </div>
           </div>
         </section>
@@ -507,12 +507,12 @@
             </div>
           </div>
           <div class="mf-flow mf-product-flow">
-            <img loading="lazy" decoding="async" class="mf-card-desktop" src="assets/mf-exact-product-card.png" alt="" />
-            <img loading="lazy" decoding="async" class="mf-flow-wide flow-booking" src="assets/mf-exact-booking.png" alt="" />
-            <img loading="lazy" decoding="async" class="mf-flow-wide flow-booking-city" src="assets/mf-exact-city.png" alt="" />
-            <img loading="lazy" decoding="async" class="mf-flow-wide flow-booking-form" src="assets/mf-exact-booking-form.png" alt="" />
-            <img loading="lazy" decoding="async" class="mf-flow-wide flow-booking-ready" src="assets/mf-exact-booking-ready.png" alt="" />
-            <img loading="lazy" decoding="async" class="mf-flow-wide flow-express" src="assets/mf-exact-express.png" alt="" />
+            <img class="mf-card-desktop" src="assets/mf-exact-product-card.png" alt="" />
+            <img class="mf-flow-wide flow-booking" src="assets/mf-exact-booking.png" alt="" />
+            <img class="mf-flow-wide flow-booking-city" src="assets/mf-exact-city.png" alt="" />
+            <img class="mf-flow-wide flow-booking-form" src="assets/mf-exact-booking-form.png" alt="" />
+            <img class="mf-flow-wide flow-booking-ready" src="assets/mf-exact-booking-ready.png" alt="" />
+            <img class="mf-flow-wide flow-express" src="assets/mf-exact-express.png" alt="" />
           </div>
         </section>
 
@@ -530,12 +530,12 @@
           </div>
           <div class="mf-flow mf-checkout-flow">
             <div class="mf-checkout-pics">
-              <img loading="lazy" decoding="async" class="checkout-cart" src="assets/mf-exact-cart.png" alt="" />
-              <img loading="lazy" decoding="async" class="checkout-form" src="assets/mf-exact-checkout.png" alt="" />
-              <img loading="lazy" decoding="async" class="checkout-final" src="assets/mf-exact-courier.png" alt="" />
-              <img loading="lazy" decoding="async" class="checkout-city" src="assets/mf-exact-mobile-city.png" alt="" />
-              <img loading="lazy" decoding="async" class="checkout-courier" src="assets/mf-exact-mobile-courier.png" alt="" />
-              <img loading="lazy" decoding="async" class="checkout-shop" src="assets/mf-exact-mobile-shop.png" alt="" />
+              <img class="checkout-cart" src="assets/mf-exact-cart.png" alt="" />
+              <img class="checkout-form" src="assets/mf-exact-checkout.png" alt="" />
+              <img class="checkout-final" src="assets/mf-exact-courier.png" alt="" />
+              <img class="checkout-city" src="assets/mf-exact-mobile-city.png" alt="" />
+              <img class="checkout-courier" src="assets/mf-exact-mobile-courier.png" alt="" />
+              <img class="checkout-shop" src="assets/mf-exact-mobile-shop.png" alt="" />
             </div>
           </div>
         </section>
@@ -556,10 +556,10 @@
             </p>
           </div>
           <div class="mf-flow mf-search-flow">
-            <img loading="lazy" decoding="async" src="assets/mf-exact-search.png" alt="" />
+            <img src="assets/mf-exact-search.png" alt="" />
           </div>
           <div class="mf-photo-strip mf-photo-strip-header">
-            <img loading="lazy" decoding="async" src="assets/mf-exact-photo.jpg" alt="" />
+            <img src="assets/mf-exact-photo.jpg" alt="" />
           </div>
         </section>
 
@@ -575,13 +575,13 @@
           <div class="mf-flow mf-uikit-flow">
             <div class="mf-uikit-row">
               <div class="mf-uikit-desktop-stack">
-                <img loading="lazy" decoding="async" class="mf-uikit-desktop-one" src="assets/mf-exact-ui-main.jpg" alt="" />
-                <img loading="lazy" decoding="async" class="mf-uikit-desktop-two" src="assets/mf-exact-ui-desktop.png" alt="" />
+                <img class="mf-uikit-desktop-one" src="assets/mf-exact-ui-main.jpg" alt="" />
+                <img class="mf-uikit-desktop-two" src="assets/mf-exact-ui-desktop.png" alt="" />
               </div>
               <div class="mf-uikit-mobile-stack">
-                <img loading="lazy" decoding="async" class="mf-uikit-mobile-one" src="assets/mf-exact-ui-mobile-main.png" alt="" />
-                <img loading="lazy" decoding="async" class="mf-uikit-mobile-two" src="assets/mf-exact-ui-mobile-second.png" alt="" />
-                <img loading="lazy" decoding="async" class="mf-uikit-mobile-three" src="assets/mf-exact-ui-mobile-third.png" alt="" />
+                <img class="mf-uikit-mobile-one" src="assets/mf-exact-ui-mobile-main.png" alt="" />
+                <img class="mf-uikit-mobile-two" src="assets/mf-exact-ui-mobile-second.png" alt="" />
+                <img class="mf-uikit-mobile-three" src="assets/mf-exact-ui-mobile-third.png" alt="" />
               </div>
             </div>
           </div>
@@ -622,7 +622,7 @@
         </section>
 
         <section class="design-system-media design-system-media-cover" aria-label="Обложка дизайн-системы Ramayana">
-          <img loading="lazy" decoding="async" src="assets/design-system-cover.png" alt="Обложка дизайн-системы Ramayana" />
+          <img src="assets/design-system-cover.png" alt="Обложка дизайн-системы Ramayana" />
         </section>
 
         <section class="mf-section mf-textrow design-system-textrow design-system-problems">
@@ -637,7 +637,7 @@
         </section>
 
         <section class="design-system-media design-system-panel" aria-label="Процесс создания дизайн-системы">
-          <img loading="lazy" decoding="async" src="assets/design-system-flow.png" alt="Процесс создания дизайн-системы" />
+          <img src="assets/design-system-flow.png" alt="Процесс создания дизайн-системы" />
         </section>
 
         <section class="mf-section mf-textrow design-system-textrow">
@@ -650,7 +650,7 @@
         </div>
 
         <section class="design-system-media design-system-panel" aria-label="Токены дизайн-системы">
-          <img loading="lazy" decoding="async" src="assets/design-system-foundations.png" alt="Токены дизайн-системы Ramayana" />
+          <img src="assets/design-system-foundations.png" alt="Токены дизайн-системы Ramayana" />
         </section>
 
         <section class="mf-section mf-textrow design-system-textrow">
@@ -659,10 +659,10 @@
         </section>
 
         <section class="design-system-media design-system-components" aria-label="Компоненты дизайн-системы">
-          <img loading="lazy" decoding="async" class="design-system-buttons" src="assets/design-system-buttons.png" alt="Кнопки дизайн-системы" />
+          <img class="design-system-buttons" src="assets/design-system-buttons.png" alt="Кнопки дизайн-системы" />
           <div class="design-system-components-column">
-            <img loading="lazy" decoding="async" src="assets/design-system-inputs.png" alt="Поля ввода дизайн-системы" />
-            <img loading="lazy" decoding="async" src="assets/design-system-icons.png" alt="Иконки дизайн-системы" />
+            <img src="assets/design-system-inputs.png" alt="Поля ввода дизайн-системы" />
+            <img src="assets/design-system-icons.png" alt="Иконки дизайн-системы" />
           </div>
         </section>
 
@@ -672,8 +672,8 @@
         </section>
 
         <section class="design-system-media design-system-templates" aria-label="Шаблоны дизайн-системы">
-          <div class="design-system-template-crop design-system-template-header"><img loading="lazy" decoding="async" src="assets/design-system-header.png" alt="Хедер сайта Ramayana" /></div>
-          <div class="design-system-template-crop design-system-template-statistics"><img loading="lazy" decoding="async" src="assets/design-system-statistics.png" alt="Статистика Ramayana" /></div>
+          <div class="design-system-template-crop design-system-template-header"><img src="assets/design-system-header.png" alt="Хедер сайта Ramayana" /></div>
+          <div class="design-system-template-crop design-system-template-statistics"><img src="assets/design-system-statistics.png" alt="Статистика Ramayana" /></div>
         </section>
 
         <section class="mf-section mf-textrow design-system-textrow design-system-done">
@@ -707,6 +707,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260824-deferred-media-1"></script>
+    <script src="script.js?v=20260807-soft-bottom-blur-11"></script>
   </body>
 </html>
