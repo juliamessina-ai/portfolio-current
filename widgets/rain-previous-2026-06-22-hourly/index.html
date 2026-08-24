@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma Weather Widget</title>
+    <link rel="stylesheet" href="./styles.css?v=77" />
+  </head>
+  <body>
+    <main class="stage" aria-label="Figma weather widget">
+      <section class="widget" data-node-id="36:4" aria-label="Weather forecast">
+        <div class="widget-design">
+          <div class="rain-flow" aria-hidden="true">
+            <video class="rain-video rain-video-base" src="./assets/rain-drops.mp4" autoplay muted loop playsinline></video>
+          </div>
+
+          <div class="progressive-edge-blur" aria-hidden="true"></div>
+
+          <div class="glass-layer" aria-hidden="true">
+            <video class="rain-video glass-layer-video" src="./assets/rain-drops.mp4" autoplay muted loop playsinline></video>
+          </div>
+
+          <div class="content" data-node-id="190:38">
+            <div class="weather-main" data-node-id="190:49">
+              <div class="temp-frame" data-node-id="190:50">
+                <div class="current-temp" data-node-id="190:51">
+                  <div class="temp-content" data-node-id="190:52">
+                    <span class="temp-value" data-node-id="190:53">29</span>
+                    <span class="temp-degree" data-node-id="190:54">°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="weather-details" data-node-id="190:41">
+              <div class="detail-lines" data-node-id="190:45">
+                <span data-node-id="190:46">H:29°</span>
+                <span data-node-id="190:47">L:19°</span>
+                <span data-node-id="190:48">UV:4</span>
+              </div>
+            </div>
+
+            <div class="hourly-row" data-node-id="190:55">
+              <div class="hour-item" data-node-id="190:56">
+                <div class="hour-copy"><span class="hour-time">13:00</span><span class="hour-temp">23°</span></div><span class="hour-divider"></span>
+              </div>
+              <div class="hour-item" data-node-id="190:57">
+                <div class="hour-copy"><span class="hour-time">14:00</span><span class="hour-temp">21°</span></div><span class="hour-divider"></span>
+              </div>
+              <div class="hour-item" data-node-id="190:58">
+                <div class="hour-copy"><span class="hour-time">15:00</span><span class="hour-temp">25°</span></div><span class="hour-divider"></span>
+              </div>
+              <div class="hour-item" data-node-id="190:59">
+                <div class="hour-copy"><span class="hour-time">16:00</span><span class="hour-temp">26°</span></div><span class="hour-divider"></span>
+              </div>
+              <div class="hour-item" data-node-id="190:60">
+                <div class="hour-copy"><span class="hour-time">17:00</span><span class="hour-temp">26°</span></div><span class="hour-divider"></span>
+              </div>
+              <div class="hour-item hour-item-last" data-node-id="190:61">
+                <div class="hour-copy"><span class="hour-time">18:00</span><span class="hour-temp">20°</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

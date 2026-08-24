@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julia Stepanova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260821-remove-eye-look-107" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Основная навигация">
+      <a class="brand" href="#portfolio" aria-label="Julia Stepanova">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 100 100" role="img" focusable="false">
+            <path class="smile-icon-path" d="m50.012 5.5547c-24.512 0-44.457 19.922-44.457 44.434s19.941 44.457 44.457 44.457c24.512 0 44.434-19.941 44.434-44.457 0-24.512-19.922-44.434-44.434-44.434zm0 5.5547c21.512 0 38.879 17.367 38.879 38.879s-17.367 38.898-38.879 38.898-38.898-17.391-38.898-38.898c0-21.512 17.391-38.879 38.898-38.879zm-10.828 24.035c-0.73828 0.003907-1.4453 0.30078-1.9609 0.82031-0.51953 0.52344-0.8125 1.2344-0.80859 1.9688v6.9727c0.007813 1.5234 1.2422 2.7617 2.7695 2.7656 0.73438 0.003906 1.4414-0.28516 1.9648-0.80469 0.52344-0.51953 0.82031-1.2266 0.82031-1.9609v-6.9727c0.003906-0.73828-0.28906-1.4492-0.8125-1.9766-0.52344-0.52344-1.2344-0.81641-1.9727-0.8125zm21.633 0h-0.003906c-0.73828 0.003907-1.4414 0.30078-1.9609 0.82031-0.51953 0.52344-0.80859 1.2344-0.80469 1.9688v6.9727c0.003906 1.5234 1.2383 2.7617 2.7656 2.7656 0.73828 0.003906 1.4453-0.28516 1.9688-0.80469 0.52344-0.51953 0.81641-1.2266 0.82031-1.9609v-6.9727c0.003907-0.73828-0.28906-1.4492-0.8125-1.9766-0.52344-0.52344-1.2344-0.81641-1.9766-0.8125zm-28.812 24.871h-0.003906c-0.65234 0.046875-1.2695 0.32422-1.7383 0.78125-1.0938 1.0664-1.125 2.8164-0.0625 3.918 5.1875 5.3672 12.344 8.4102 19.809 8.4102 7.4648 0 14.605-3.0391 19.793-8.4102h-0.003906c1.0586-1.1016 1.0312-2.8516-0.066406-3.918-0.53125-0.51172-1.2461-0.79297-1.9844-0.77734-0.73438 0.011719-1.4336 0.31641-1.9492 0.84375-4.1406 4.2852-9.8281 6.6992-15.789 6.6992-5.9609 0-11.668-2.4141-15.809-6.6992h0.003906c-0.57422-0.59766-1.3828-0.90625-2.2031-0.84766z" />
+          </svg>
+        </span>
+        <span class="pill">Julia Stepanova</span>
+      </a>
+
+      <nav class="segment" aria-label="Разделы сайта">
+        <button class="segment-button active" type="button" data-page="portfolio">Portfolio</button>
+        <button class="segment-button" type="button" data-page="photos">Photos</button>
+      </nav>
+
+      <div class="contacts" aria-label="Контакты">
+        <a class="contact" href="https://t.me/julia_messina" aria-label="Telegram">
+          <span class="pill"><span class="contact-label-desktop">telegram</span><span class="contact-label-mobile">tg</span></span>
+          <span class="contact-icon contact-icon-blue" aria-hidden="true">
+            <svg viewBox="0 0 14 14" focusable="false">
+              <path d="M11.3725 2.62325L3.37012 10.6256" />
+              <path d="M3.01352 2.99271V10.9885H11.0093" />
+            </svg>
+          </span>
+        </a>
+        <a class="contact" href="mailto:Sirahouel@gmail.com" aria-label="Gmail">
+          <span class="pill"><span class="contact-label-desktop">gmail</span><span class="contact-label-mobile">gm</span></span>
+          <span class="contact-icon contact-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 14 14" focusable="false">
+              <path d="M11.3725 2.62325L3.37012 10.6256" />
+              <path d="M3.01352 2.99271V10.9885H11.0093" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <div class="project-cursor" aria-hidden="true">
+      <span class="project-cursor-label">Подробнее</span>
+      <span class="project-cursor-icon">
+        <svg viewBox="0 0 14 14" focusable="false">
+          <path d="M11.3725 2.62325L3.37012 10.6256" />
+          <path d="M3.01352 2.99271V10.9885H11.0093" />
+        </svg>
+      </span>
+    </div>
+
+    <main>
+      <section class="page page-portfolio active" data-page-panel="portfolio">
+        <div class="portfolio-alt-background" aria-hidden="true">
+          <video class="portfolio-alt-effect-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/effects/portfolio-alt-hover-effect.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <section class="intro portfolio-intro" aria-labelledby="portfolio-title">
+          <div class="intro-copy">
+            <h1 id="portfolio-title" class="hello-title" tabindex="0">
+              <span class="hello-text">
+                <span class="hello-text-face hello-text-front">Привет, Я Юля</span>
+                <span class="hello-text-face hello-text-back">Эй-эй, привет!</span>
+              </span>
+              <span class="hello-photo" aria-hidden="true">
+                <img class="hello-photo-pixel" src="assets/portrait-default-20260819.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-blink" src="assets/portrait-blink-20260819.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-1" src="assets/portrait-wave-20260819c-1.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-2" src="assets/portrait-wave-20260819c-2.svg" alt="" />
+                <img class="hello-photo-pixel hello-photo-wave hello-photo-wave-3" src="assets/portrait-wave-20260819c-3.svg" alt="" />
+                <img class="hello-photo-alt" src="assets/portfolio-alt-portrait.png" alt="" />
+              </span>
+            </h1>
+            <p>
+              Я UX/UI‑дизайнер с 3+&nbsp;лет опыта в B2C. Работала с e‑commerce
+              проектами, личными кабинетами, программами лояльности и лендингами
+            </p>
+            <img class="portfolio-alt-signal" src="assets/portfolio-alt-signal.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="puzzle-layer" aria-hidden="true">
+            <div class="puzzle-piece puzzle-piece-black"><span class="puzzle-label">участник дизайн-клуба Creative Sparks</span></div>
+            <div class="puzzle-piece puzzle-piece-orange"><span class="puzzle-label">участник дизайн-клуба Creative Sparks</span></div>
+            <div class="puzzle-piece puzzle-piece-green">
+              <span class="puzzle-label puzzle-label-cv">опыт</span>
+              <span class="puzzle-label puzzle-label-companies">Biblioteka Aromatov (1,5 года)<br />Mark Formelle<br />(0,5 года)<br />Ramayana Water Park<br />(2 года)</span>
+            </div>
+            <div class="puzzle-piece puzzle-piece-gray"><span class="puzzle-label">Ценю<br />эмоциональный и&nbsp;отзывчивый дизайн, JTBD</span></div>
+          </div>
+        </section>
+
+        <section class="cases" aria-label="Портфолио">
+          <div class="concepts">
+            <div class="section-heading">
+              <h2>UI challenge</h2>
+              <p>Concepts &amp; animation with vibecoding <span></span> 2026</p>
+            </div>
+
+            <div class="challenge-grid">
+              <article class="challenge-card weather-card">
+                <span class="tag tag-pink">Weather widget</span>
+                <div class="weather-phone weather-phone-sun" aria-label="Анимированный солнечный виджет в мокапе телефона">
+                  <span class="weather-phone-button weather-phone-mute" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-volume-up" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-volume-down" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-side" aria-hidden="true"></span>
+                  <div class="weather-phone-screen">
+                    <iframe class="weather-sun-frame" src="widgets/sun/index.html?v=94" title="Weather widget: солнце" loading="eager"></iframe>
+                  </div>
+                  <div class="weather-status-bar" aria-hidden="true">
+                    <span class="weather-status-time">09:47</span>
+                    <span class="weather-dynamic-island"><i class="weather-island-camera"></i></span>
+                    <svg class="weather-status-icons" viewBox="0 0 55 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="currentColor">
+                        <rect x="0" y="5" width="2.5" height="4" rx="1.25" />
+                        <rect x="4" y="3.5" width="2.5" height="5.5" rx="1.25" />
+                        <rect x="8" y="1.75" width="2.5" height="7.25" rx="1.25" />
+                        <rect x="12" width="2.5" height="9" rx="1.25" />
+                      </g>
+                      <g stroke="currentColor" stroke-linecap="round" stroke-width="1.45">
+                        <path d="M19 2.2C22.1-.35 27.1-.35 30.2 2.2" />
+                        <path d="M21.6 4.65c1.75-1.45 4.25-1.45 6 0" />
+                      </g>
+                      <circle cx="24.6" cy="7.35" r="1.05" fill="currentColor" />
+                      <rect x="35.5" y=".65" width="16.5" height="7.7" rx="2.1" stroke="currentColor" stroke-opacity=".75" stroke-width="1.1" />
+                      <rect x="37" y="2" width="13.5" height="5" rx="1.15" fill="currentColor" />
+                      <path d="M53 3v3c1 0 1.5-.55 1.5-1.5S54 3 53 3Z" fill="currentColor" fill-opacity=".75" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="weather-phone weather-phone-rain" aria-label="Анимированный дождевой виджет в мокапе телефона">
+                  <span class="weather-phone-button weather-phone-mute" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-volume-up" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-volume-down" aria-hidden="true"></span>
+                  <span class="weather-phone-button weather-phone-side" aria-hidden="true"></span>
+                  <div class="weather-phone-screen">
+                    <div class="weather-widget-embed">
+                      <iframe src="widgets/rain/index.html?v=94" title="Weather widget: дождь" loading="eager"></iframe>
+                    </div>
+                  </div>
+                  <div class="weather-status-bar" aria-hidden="true">
+                    <span class="weather-status-time">09:47</span>
+                    <span class="weather-dynamic-island"><i class="weather-island-camera"></i></span>
+                    <svg class="weather-status-icons" viewBox="0 0 55 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="currentColor">
+                        <rect x="0" y="5" width="2.5" height="4" rx="1.25" />
+                        <rect x="4" y="3.5" width="2.5" height="5.5" rx="1.25" />
+                        <rect x="8" y="1.75" width="2.5" height="7.25" rx="1.25" />
+                        <rect x="12" width="2.5" height="9" rx="1.25" />
+                      </g>
+                      <g stroke="currentColor" stroke-linecap="round" stroke-width="1.45">
+                        <path d="M19 2.2C22.1-.35 27.1-.35 30.2 2.2" />
+                        <path d="M21.6 4.65c1.75-1.45 4.25-1.45 6 0" />
+                      </g>
+                      <circle cx="24.6" cy="7.35" r="1.05" fill="currentColor" />
+                      <rect x="35.5" y=".65" width="16.5" height="7.7" rx="2.1" stroke="currentColor" stroke-opacity=".75" stroke-width="1.1" />
+                      <rect x="37" y="2" width="13.5" height="5" rx="1.15" fill="currentColor" />
+                      <path d="M53 3v3c1 0 1.5-.55 1.5-1.5S54 3 53 3Z" fill="currentColor" fill-opacity=".75" />
+                    </svg>
+                  </div>
+                </div>
+              </article>
+              <article class="challenge-card pomodoro-card" aria-label="Pomodoro timer">
+                <span class="tag tag-mint">Pomodoro timer</span>
+                <div class="pomodoro-video-frame">
+                  <video src="assets/pomodoro-timer.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card" data-project="loyalty-program" role="link" tabindex="0" aria-label="Открыть проект Программа лояльности">
+              <h3>Программа лояльности &amp; Личный кабинет</h3>
+              <p>Ramayana Water Park <span></span> 2024–2025</p>
+              <div class="case-image case-white">
+                <div class="case-main"><div class="case-main-viewport"><img src="assets/case-ramayana-dashboard.jpg" alt="" /></div></div>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <h3>Sustainability &amp; Site</h3>
+              <p>Ramayana Water Park <span></span> 2024–2026</p>
+              <div class="case-image case-white case-sustainability-cover">
+                <div class="case-mark-formelle-frame case-sustainability-frame">
+                  <div class="case-sustainability-viewport">
+                    <video src="assets/sustainability-cover-video.mp4" autoplay muted loop playsinline preload="metadata" data-playback-rate="1.2"></video>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card" data-project="mark-formelle" role="link" tabindex="0" aria-label="Открыть проект Mark formelle">
+              <h3>Сайт &amp; Функционал бронирования</h3>
+              <p>Mark Formelle <span></span> 2023–2024</p>
+              <div class="case-image case-white case-mark-formelle-cover">
+                <div class="case-mark-formelle-frame">
+                  <div class="case-mark-formelle-viewport">
+                    <video src="assets/mark-formelle-cover-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card" data-project="design-system" role="link" tabindex="0" aria-label="Открыть проект Дизайн-система Ramayana">
+              <h3>Дизайн-система Ramayana</h3>
+              <p>Ramayana Water Park <span></span> 2024–2026</p>
+              <div class="case-image case-white case-design-system-cover">
+                <img src="assets/case-design-system-cover-ramayana.png" alt="" />
+              </div>
+            </article>
+
+            <article class="case-card" hidden>
+              <h3>Ticket Vending Machine</h3>
+              <p>Ramayana Water Park <span></span> 2024–2025</p>
+              <div class="case-image placeholder"></div>
+            </article>
+
+            <article class="case-card" hidden>
+              <h3>Остальное</h3>
+              <p>Постеры, графика, арт <span></span> 2023–2026</p>
+              <div class="case-image placeholder"></div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page page-photos" data-page-panel="photos">
+        <section class="intro photos-intro" aria-labelledby="photos-title">
+          <h1 id="photos-title">
+            Я много фотографирую на пленку и исследую мир через камеру.
+            Здесь часть того, как я вижу мир и на что люблю смотреть
+          </h1>
+        </section>
+
+        <section class="photo-grid" aria-label="Фотографии">
+          <figure class="photo-tile" style="--x: 0; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-01.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-02.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 0; --w: 456; --h: 687.785"><img src="assets/photo-03.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 699.785; --w: 456; --h: 729.67"><img src="assets/photo-06.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 699.785; --w: 924; --h: 1393.67"><img src="assets/photo-05a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 1441.455; --w: 456; --h: 652"><img src="assets/photo-04.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-09.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-07.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 2105.455; --w: 456; --h: 687.785"><img src="assets/photo-08.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 2805.24; --w: 924; --h: 1393.67"><img src="assets/photo-11.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 2805.24; --w: 456; --h: 687.785"><img src="assets/photo-12.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 3508.075; --w: 456; --h: 687.785"><img src="assets/photo-19.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-21a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-10.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 4210.91; --w: 456; --h: 687.785"><img src="assets/photo-20.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 4910.695; --w: 456; --h: 681.657"><img src="assets/photo-16a.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 5607.322; --w: 456; --h: 681.657"><img src="assets/photo-14.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 456; --y: 6303.948; --w: 456; --h: 681.657"><img src="assets/photo-13.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 6303.948; --w: 456; --h: 681.657"><img src="assets/photo-25.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 7714.948; --w: 456; --h: 681.657"><img src="assets/photo-24.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 924; --y: 7714.948; --w: 456; --h: 681.657"><img src="assets/photo-17.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 8408.605; --w: 456; --h: 682"><img src="assets/photo-29.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 468; --y: 8408.605; --w: 924; --h: 1381.253"><img src="assets/photo-26.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 9105.403; --w: 456; --h: 681.657"><img src="assets/photo-27.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 0; --y: 9801.858; --w: 924; --h: 1381.253"><img src="assets/photo-28.jpg" alt="" /></figure>
+          <figure class="photo-tile" style="--x: 936; --y: 10498.484; --w: 456; --h: 681.657"><img src="assets/photo-31.jpg" alt="" /></figure>
+        </section>
+      </section>
+
+      <section class="page page-project page-loyalty" data-page-panel="loyalty-program" aria-label="Проект Программа лояльности">
+        <section class="loyalty-section loyalty-hero">
+          <div class="loyalty-hero-copy">
+            <div class="loyalty-hero-meta project-hero-meta">
+              <div>
+                <span>2024-2026</span>
+              </div>
+            </div>
+            <div class="loyalty-title-block">
+              <h1>Программа лояльности<br />и личный кабинет Ramayana</h1>
+            </div>
+            <div class="loyalty-results">
+              <p>
+                <span class="mf-summary-label" aria-hidden="true">→</span>
+                Обновление ключевых флоу сайта, разгрузка саппорта,
+                <span>+14%</span> конверсия продаж доп. услуг парка
+                (фудкорт, локеры, кабаны), <span>+15%</span> AOV
+                Увеличение среднего чека внутри парка, оптимизация
+                внутренней логистики.
+              </p>
+            </div>
+          </div>
+
+          <div class="loyalty-shot loyalty-shot-hero">
+            <img class="loyalty-case-composite" src="assets/loyalty-case-hero-hq.png" alt="Личный кабинет программы лояльности Ramayana" />
+          </div>
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>О продукте</h2>
+            <p>
+              Ramayana Water Park — крупнейший аквапарк мира, №&nbsp;1 по
+              величине и популярности в Таиланде, №&nbsp;9 — в мире. Основной поток клиентов —
+              местные жители, туристы и локальные посетители, которые совершают
+              разовый визит. Привлечение каждого нового пользователя обходится
+              маркетингу дорого.
+            </p>
+          </div>
+          <div class="loyalty-copy-row">
+            <h2>Задача</h2>
+            <div>
+              <p>Перед дизайном стояла задача — разработать единую экосистему, которая решит три ключевые бизнес-цели:</p>
+              <p>LTV & Retention: мотивировать пользователей возвращаться в парк повторно за счёт ценности накопленных бонусов.</p>
+              <p>Увеличение среднего чека (AOV): стимулировать внутренние продажи (еда, сувениры, аренда локеров, фото) через геймификацию.</p>
+              <p>Оптимизация офлайн-логистики: разгрузить кассы на входе и внутри парка, переведя покупку услуг в онлайн.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-points">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-points-hq.png" alt="Личный кабинет Ramayana: баллы, квесты и описание программы" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Контекст</h2>
+            <div>
+              <p>«Водный» контекст: во время отдыха у гостя нет с собой карт и кошелька. Единственный платежный инструмент — RFID-браслет. Личный кабинет выступает цифровым хабом, который агрегирует все действия, привязанные к этому браслету.</p>
+              <p>Технические ограничения баланса: на макетах реализовано разделение на Active Points (доступные для списания сейчас) и Pending Points (бонусы, которые станут активны после 20:00). Это техническое решение защищает систему от фрода и учитывает задержку синхронизации данных с оффлайн-валидаторами парка.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-levels">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-levels-hq.png" alt="Уровни программы лояльности" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Процесс и решения</h2>
+            <ul>
+              <li>Оцифровать офлайн-опыт гостя, связав личный кабинет с RFID-браслетом.</li>
+              <li>Финансовый баланс жестко привязан к реальной валюте (10&nbsp;points = 1&nbsp;THB) для прозрачности расчетов.</li>
+              <li>Система статусов лояльности (Bronze, Silver, Gold, Diamond) для мотивации к новым визитам.</li>
+              <li>Инструмент для кросс-маркетинга с отелями-партнерами Паттайи.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-dashboard">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-dashboard-hq.png" alt="Главный экран личного кабинета Ramayana" />
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-entry">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-entry-hq.png" alt="Точки входа в программу лояльности" />
+          <span class="loyalty-entry-emoji loyalty-entry-emoji-web" aria-hidden="true">🎟️</span>
+          <span class="loyalty-entry-emoji loyalty-entry-emoji-park" aria-hidden="true">📱</span>
+          <span class="loyalty-entry-emoji loyalty-entry-emoji-checkout" aria-hidden="true">🧾</span>
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Механика квестов и Геймификация</h2>
+            <p>Задачи разделены по уровням сложности и привязаны к офлайн-контексту («Купи 3&nbsp;порции мороженого», «Прокатись на 3&nbsp;горках»). Каждый блок содержит индикатор прогресса (2/3 done), мотивирующий пользователя завершить действие.</p>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-screen-shot loyalty-shot-quests">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-quests-hq.png" alt="Quests" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Бесплатные фото</h2>
+            <div>
+              <p>Драйвер для регулярной авторизации в личном кабинете. Фотографии с камер на аттракционах автоматически привязываются к RFID-браслету.</p>
+              <p>Установленный лимит хранения файлов (12&nbsp;дней) создаёт триггер FOMO, заставляя гостя зайти в кабинет сразу после визита, скачать контент и увидеть спецпредложения парка и отелей-партнёров.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-screen-shot loyalty-shot-free-photo">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-free-photo-hq.png" alt="Free photos" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>История оплат</h2>
+            <div>
+              <p>В общей ленте транзакций наглядно разделены начисления (+8&nbsp;000) и списания бонусов (-2&nbsp;500).</p>
+              <p>Попап Order Details показывает покупки в подробностях (типы билетов, аренда кабан, локеров, полотенец и трансфер), исключая необходимость обращения гостя на кассу или в саппорт за разъяснениями.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-screen-shot loyalty-shot-payment-history">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-payment-history-hq.png" alt="Payment history" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Семейный аккаунт</h2>
+            <div>
+              <p>Аквапарк — это коллективный отдых, где часто за семью или группу платит один человек. Глава семьи может привязать RFID-браслеты детей или друзей к своему личному кабинету прямо в веб-интерфейсе. Это позволяет пополнять один общий счет вместо администрирования каждого браслета по отдельности.</p>
+              <p>Так же этот функционал снизил нагрузку на оффлайн-точки пополнения внутри парка.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-accompanying">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-family-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-groups">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-groups-hq.png" alt="Семейный аккаунт и сопровождающие люди" />
+        </section>
+
+        <section class="loyalty-text-section">
+          <div class="loyalty-copy-row">
+            <h2>Адаптив</h2>
+            <p>Для всех макетов был сделан адаптив.</p>
+          </div>
+        </section>
+
+        <section class="loyalty-shot loyalty-shot-final">
+          <img class="loyalty-case-composite" src="assets/loyalty-case-mobile-hq.png" alt="Адаптивные экраны личного кабинета Ramayana" />
+        </section>
+
+        <a class="project-back" href="#portfolio" aria-label="Вернуться к проектам">
+          <span class="project-back-icon" aria-hidden="true">
+            <span class="project-back-icon-face project-back-icon-front">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+            <span class="project-back-icon-face project-back-icon-back">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+          </span>
+          <span class="project-back-label">к проектам</span>
+        </a>
+      </section>
+
+      <section class="page page-project page-mark-formelle" data-page-panel="mark-formelle" aria-label="Проект Mark formelle">
+        <section class="mf-section mf-hero">
+          <div class="mf-description">
+            <div class="project-hero-meta">
+              <div>
+                <span>2024-2026</span>
+              </div>
+            </div>
+            <h1>Mark Formelle. Сайт &amp; бронирование</h1>
+            <p class="mf-summary">
+              <span class="mf-summary-label" aria-hidden="true">→</span>
+              <span>+18% в оплату</span> снижение процента брошенных корзин, рост конверсии этапа оформления заказа,
+              <span>-45 секунд</span> ускорение оформления заказа, рост бронирований через оффлайн-сеть.
+            </p>
+          </div>
+          <div class="mf-flow mf-cover-flow">
+            <div class="mf-cover-video-frame" aria-label="Флоу бронирования Mark Formelle">
+              <video src="assets/mark-formelle-cover-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            </div>
+          </div>
+        </section>
+
+        <section class="mf-section">
+          <div class="mf-textrow mf-textrow-wide">
+            <h2>О компании и моей роли</h2>
+            <p>
+              Mark Formelle — крупный международный fashion-ритейлер и производитель базовой одежды с собственной розничной сетью из более чем 300 магазинов.
+              <br /><br />
+              Я была единственным продуктовым дизайнером на e-commerce направлении и вела задачи автономно: от проектирования чекаута и флоу бронирования до контроля разработки. На старте единых гайдлайнов не было, поэтому я оперативно собрала с нуля рабочий UI-kit, что позволило навести порядок в хаосе и в разы ускорить сборку мобильных и десктопных экранов.
+            </p>
+          </div>
+        </section>
+
+        <section class="mf-section">
+          <div class="mf-textrow mf-textrow-wide">
+            <h2>Проблемы</h2>
+            <div>
+              <p>
+                Перед e-commerce платформой стояли две ключевые проблемы, которые прямо влияли на доход компании:
+              </p>
+              <ul>
+                <li>Дроп-офф в чекауте: старая форма оформления заказа путала пользователей кашей из способов доставки, из-за чего они бросали корзину перед оплатой.</li>
+                <li>Изоляция оффлайна: если нужного размера не оказывалось в интернет-магазине, пользователь просто уходил с сайта. При этом вещь могла быть в наличии в физическом магазине рядом с ним.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mf-section">
+          <div class="mf-textrow mf-textrow-wide">
+            <h2>Бронь из карточки товара</h2>
+            <div>
+              <p>Была продумана интерактивная проверка остатков: пользователь открывает карту и видит, в каких именно магазинах города выбранная вещь есть в наличии прямо сейчас.</p>
+              <p>Быстрый резерв: оформление брони сокращено до ввода номера телефона. Не нужно заполнять длинный адрес доставки — вещь резервируется в оффлайне за секунды.</p>
+            </div>
+          </div>
+          <div class="mf-flow mf-product-flow">
+            <img class="mf-card-desktop" src="assets/mf-exact-product-card.png" alt="" />
+            <img class="mf-flow-wide flow-booking" src="assets/mf-exact-booking.png" alt="" />
+            <img class="mf-flow-wide flow-booking-city" src="assets/mf-exact-city.png" alt="" />
+            <img class="mf-flow-wide flow-booking-form" src="assets/mf-exact-booking-form.png" alt="" />
+            <img class="mf-flow-wide flow-booking-ready" src="assets/mf-exact-booking-ready.png" alt="" />
+            <img class="mf-flow-wide flow-express" src="assets/mf-exact-express.png" alt="" />
+          </div>
+        </section>
+
+        <section class="mf-section">
+          <div class="mf-textrow mf-textrow-checkout">
+            <h2>Корзина</h2>
+            <div>
+              <p>
+                Предыдущий вариант корзины совмещал в себе одновременно саму корзину и оформление заказа на одной странице. Это путало пользователей и делало сценарий чекаута перегруженным и неудобным.
+                <br /><br />
+                Разделили корзину и чек-аут, обновили дизайн интерфейса, унифицировали многие элементы для UI-kit. В итоге корзина стала проще в восприятии и удобнее в использовании.
+              </p>
+              <p class="mf-result">✦ В результате конверсия оформленных заказов увеличилась на 7%.</p>
+            </div>
+          </div>
+          <div class="mf-flow mf-checkout-flow">
+            <div class="mf-checkout-pics">
+              <img class="checkout-cart" src="assets/mf-exact-cart.png" alt="" />
+              <img class="checkout-form" src="assets/mf-exact-checkout.png" alt="" />
+              <img class="checkout-final" src="assets/mf-exact-courier.png" alt="" />
+              <img class="checkout-city" src="assets/mf-exact-mobile-city.png" alt="" />
+              <img class="checkout-courier" src="assets/mf-exact-mobile-courier.png" alt="" />
+              <img class="checkout-shop" src="assets/mf-exact-mobile-shop.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="mf-section">
+          <div class="mf-textrow mf-textrow-wide mf-textrow-search">
+            <h2>Хидер, поиск</h2>
+            <p>
+              Инициировала обновление поиска и хидера, так как текущий вариант был сделан верстальщиком без макетов, не учитывал рекомендации и популярные запросы, не вписывался в стилистику сайта.
+              <br />
+              Хидер занимал по высоте немаленькую часть сайта, что скорее раздражало пользователей.
+              <br /><br />
+              После обсуждения с командой маркетинга и аналитиком добавили возможность поиска по названию, цвету и артикулу, также добавили вывод рекомендаций на основе просмотренных товаров и вывели популярные категории запросов.
+              <br /><br />
+              Хидер значительно уменьшили, обновили дизайн и иконки.
+              <br />
+              Страница стала восприниматься гораздо проще.
+            </p>
+          </div>
+          <div class="mf-flow mf-search-flow">
+            <img src="assets/mf-exact-search.png" alt="" />
+          </div>
+          <div class="mf-photo-strip mf-photo-strip-header">
+            <img src="assets/mf-exact-photo.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="mf-section mf-ui-kit">
+          <div class="mf-textrow mf-textrow-uikit">
+            <h2>UI kit</h2>
+            <p>
+              Помимо работы над сайтом и SaaS-приложением, я инициировала создание и внедрение полноценного UI kit: сайт почти не использовал атомы и более крупные компоненты.
+              <br />
+              По мере развития UI kit дизайн и разработка стали быстрее и удобнее, а изменения — проще во внедрении.
+            </p>
+          </div>
+          <div class="mf-flow mf-uikit-flow">
+            <div class="mf-uikit-row">
+              <div class="mf-uikit-desktop-stack">
+                <img class="mf-uikit-desktop-one" src="assets/mf-exact-ui-main.jpg" alt="" />
+                <img class="mf-uikit-desktop-two" src="assets/mf-exact-ui-desktop.png" alt="" />
+              </div>
+              <div class="mf-uikit-mobile-stack">
+                <img class="mf-uikit-mobile-one" src="assets/mf-exact-ui-mobile-main.png" alt="" />
+                <img class="mf-uikit-mobile-two" src="assets/mf-exact-ui-mobile-second.png" alt="" />
+                <img class="mf-uikit-mobile-three" src="assets/mf-exact-ui-mobile-third.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <a class="project-back" href="#portfolio" aria-label="Вернуться к проектам">
+          <span class="project-back-icon" aria-hidden="true">
+            <span class="project-back-icon-face project-back-icon-front">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+            <span class="project-back-icon-face project-back-icon-back">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+          </span>
+          <span class="project-back-label">к проектам</span>
+        </a>
+      </section>
+
+      <section class="page page-project page-design-system" data-page-panel="design-system" aria-label="Проект Дизайн-система Ramayana">
+        <section class="mf-section mf-hero design-system-hero">
+          <div class="mf-description design-system-description">
+            <div class="project-hero-meta">
+              <div>
+                <span>2024-2026</span>
+              </div>
+            </div>
+            <h1>Дизайн-система Ramayana</h1>
+            <p class="mf-summary design-system-summary">
+              <span class="mf-summary-label" aria-hidden="true">→</span> <strong>в 2 раза</strong> быстрее передача экранов в разработку,<br />разработчики начали внедрять компоненты
+            </p>
+          </div>
+        </section>
+
+        <section class="design-system-media design-system-media-cover" aria-label="Обложка дизайн-системы Ramayana">
+          <img src="assets/design-system-cover.png" alt="Обложка дизайн-системы Ramayana" />
+        </section>
+
+        <section class="mf-section mf-textrow design-system-textrow design-system-problems">
+          <h2>Проблемы</h2>
+          <ul>
+            <li><strong>Нет консистентности</strong><br />Везде разные расстояния, цвета, скругления, сборка через группы и отсутствие лейаутов</li>
+            <li><strong>Проблемы в организации компонентов</strong><br />Компоненты создавались свои для каждого файла в Figma</li>
+            <li><strong>Нет переиспользования</strong><br />Многие блоки, размеры шрифтов и прочие части макета каждый раз создавались с нуля</li>
+            <li><strong>Долгая разработка дизайн-решений</strong><br />Тратится время на согласование UI по каждому дизайн-решению.</li>
+            <li><strong>Не используется потенциал</strong><br />Учитывая популярность и размеры сайта, отсутствие переменных и компонентного подхода заранее затрудняет развитие и рост продукта (требуется программа лояльности, b2b-платформа, POS, касса самообслуживания и др.)</li>
+          </ul>
+        </section>
+
+        <section class="design-system-media design-system-panel" aria-label="Процесс создания дизайн-системы">
+          <img src="assets/design-system-flow.png" alt="Процесс создания дизайн-системы" />
+        </section>
+
+        <section class="mf-section mf-textrow design-system-textrow">
+          <h2>Foundations</h2>
+          <p>Изучив все компоненты, отступы, цвета и формы, выделила и оставила наиболее повторяющиеся.<br /><br />Первый шаг — создание переменных примитивов: цветовой палитры на основе уже имеющихся цветов, числовых значений для паддингов, гепов, скруглений, прозрачности, теней, шрифтовых размеров и пр.<br /><br />Второй шаг — нанизывание семантики на текущие примитивы. Важно отметить, что поскольку сайт из-за своей азиатской специфики имел большое количество цветов + даже в помещениях было много солнечного света = особенно важно было учесть контентную контрастность на каждом цвете. Каждый цвет был прочекан через Colour contrast checker</p>
+        </section>
+
+        <div class="design-system-stages" aria-label="Этапы дизайн-системы">
+          <span>Foundations/Tokens</span><span>Components</span><span>Templates</span>
+        </div>
+
+        <section class="design-system-media design-system-panel" aria-label="Токены дизайн-системы">
+          <img src="assets/design-system-foundations.png" alt="Токены дизайн-системы Ramayana" />
+        </section>
+
+        <section class="mf-section mf-textrow design-system-textrow">
+          <h2>Components</h2>
+          <p>Постепенно сокращали повторяющиеся не единообразные элементы и контролы, внедряя компоненты, использующие семантические токены. Такой подход гарантировал, что система останется масштабируемой, интерфейс будет консистентным, а код — чистым.</p>
+        </section>
+
+        <section class="design-system-media design-system-components" aria-label="Компоненты дизайн-системы">
+          <img class="design-system-buttons" src="assets/design-system-buttons.png" alt="Кнопки дизайн-системы" />
+          <div class="design-system-components-column">
+            <img src="assets/design-system-inputs.png" alt="Поля ввода дизайн-системы" />
+            <img src="assets/design-system-icons.png" alt="Иконки дизайн-системы" />
+          </div>
+        </section>
+
+        <section class="mf-section mf-textrow design-system-textrow">
+          <h2>Templates</h2>
+          <p>Шаблоны и «организмы»: страницы, таблицы и крупные модули сайта, хедеры и футеры для различных флоу, функциональные баннеры и т. д.<br /><br />Темплейты пополнялись также вместе с развитием продукта, с появлением B2B-платформы и программы лояльности — сайдбары, графики, интерактивные таблицы и остальные.</p>
+        </section>
+
+        <section class="design-system-media design-system-templates" aria-label="Шаблоны дизайн-системы">
+          <div class="design-system-template-crop design-system-template-header"><img src="assets/design-system-header.png" alt="Хедер сайта Ramayana" /></div>
+          <div class="design-system-template-crop design-system-template-statistics"><img src="assets/design-system-statistics.png" alt="Статистика Ramayana" /></div>
+        </section>
+
+        <section class="mf-section mf-textrow design-system-textrow design-system-done">
+          <h2>Что было сделано</h2>
+          <ul>
+            <li>Собрана информация и анализ ситуации в отделе дизайна</li>
+            <li>Разработаны примитивные и семантические токены</li>
+            <li>Разработаны дизайн-компоненты</li>
+            <li>Подготовлен гайд по использованию компонентов</li>
+            <li>Регулярные встречи по дизайн-системе</li>
+          </ul>
+        </section>
+
+        <a class="project-back" href="#portfolio" aria-label="Вернуться к проектам">
+          <span class="project-back-icon" aria-hidden="true">
+            <span class="project-back-icon-face project-back-icon-front">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+            <span class="project-back-icon-face project-back-icon-back">
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M11.3725 2.62325L3.37012 10.6256" />
+                <path d="M3.01352 2.99271V10.9885H11.0093" />
+              </svg>
+            </span>
+          </span>
+          <span class="project-back-label">к проектам</span>
+        </a>
+      </section>
+    </main>
+
+    <script src="script.js?v=20260807-soft-bottom-blur-11"></script>
+  </body>
+</html>

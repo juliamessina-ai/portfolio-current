@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" shape-rendering="crispEdges">
+  <rect width="36" height="36" fill="#315B43"/>
+
+  <!-- Stepped outer contour: compact head with a bob haircut. -->
+  <path fill="#fff" d="M12 4h12v2h4v2h3v3h2v13h-2v4h-3v2h-4v2H12v-2H8v-2H5v-4H3V11h2V8h3V6h4V4Zm0 3H9v2H7v3H6v11h2v4h4v2h12v-2h4v-4h2V12h-2V9h-4V7H12Z"/>
+
+  <!-- Asymmetrical fringe, kept as a white outline rather than a filled face. -->
+  <path fill="#fff" d="M8 10h5V8h11v2h4v3h-3v-1h-5v2h-4v2h-3v3H9v-2H7v-5h1v-2Z"/>
+
+  <!-- Open eyes and small friendly mouth. -->
+  <rect x="11" y="19" width="2" height="3" fill="#fff"/>
+  <rect x="22" y="19" width="2" height="3" fill="#fff"/>
+  <rect x="15" y="24" width="2" height="2" fill="#fff"/>
+  <rect x="17" y="26" width="6" height="2" fill="#fff"/>
+</svg>
