@@ -212,6 +212,77 @@ function initCoverVideoPlaybackRates() {
   });
 }
 
+function initDeferredMedia() {
+  const deferredFrames = document.querySelectorAll("iframe[data-src]");
+  const deferredVideos = Array.from(document.querySelectorAll("video")).filter(
+    (video) =>
+      video.dataset.src || video.querySelector("source[data-src]")
+  );
+
+  const loadFrame = (frame) => {
+    if (!frame.dataset.src) return;
+    frame.src = frame.dataset.src;
+    frame.removeAttribute("data-src");
+  };
+
+  const loadVideo = (video) => {
+    let sourceAdded = false;
+
+    if (video.dataset.src) {
+      video.src = video.dataset.src;
+      video.removeAttribute("data-src");
+      sourceAdded = true;
+    }
+
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+      sourceAdded = true;
+    });
+
+    if (sourceAdded) video.load();
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    deferredFrames.forEach(loadFrame);
+    deferredVideos.forEach((video) => {
+      loadVideo(video);
+      video.play().catch(() => {});
+    });
+    return;
+  }
+
+  const frameObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadFrame(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "100px 0px" }
+  );
+
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+          loadVideo(video);
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { rootMargin: "350px 0px", threshold: 0.01 }
+  );
+
+  deferredFrames.forEach((frame) => frameObserver.observe(frame));
+  deferredVideos.forEach((video) => videoObserver.observe(video));
+}
+
 function initStickyHeaderThreshold() {
   const header = document.querySelector(".site-header");
   const portfolioCases = document.querySelector(".page-portfolio .cases");
@@ -259,4 +330,5 @@ initNavigation();
 initProjectCursor();
 initIntroPuzzles();
 initCoverVideoPlaybackRates();
+initDeferredMedia();
 initStickyHeaderThreshold();
