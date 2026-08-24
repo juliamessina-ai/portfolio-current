@@ -75,6 +75,209 @@ body > main {
   }
 }
 
+/* Loyalty flow — Figma node 443:4. */
+.page-loyalty .loyalty-flow-section {
+  width: 100%;
+  padding: clamp(32px, 5.14vw, 74px);
+  overflow: hidden;
+  border-radius: 40px;
+  background: #fff;
+}
+
+.loyalty-flow-heading {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: clamp(76px, 7.65vw, 110px);
+}
+
+.loyalty-flow-heading h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  color: #000;
+  font-size: clamp(28px, 2.78vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.loyalty-flow-arrow,
+.page-loyalty .loyalty-flow-arrow {
+  position: absolute;
+  display: block;
+  height: auto;
+  border: 0 !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+
+.loyalty-flow-arrow-left {
+  top: clamp(21px, 2.4vw, 35px);
+  left: 27.5%;
+  width: clamp(56px, 6.13vw, 88px);
+  transform: scaleX(-1);
+}
+
+.loyalty-flow-arrow-center {
+  top: clamp(43px, 4.2vw, 60px);
+  left: 49.2%;
+  width: clamp(14px, 1.52vw, 22px);
+}
+
+.loyalty-flow-arrow-right {
+  top: clamp(22px, 2.5vw, 36px);
+  right: 27.5%;
+  width: clamp(47px, 5.06vw, 73px);
+}
+
+.loyalty-flow-stage {
+  display: flex;
+  width: 100%;
+  min-height: clamp(148px, 14.6vw, 210px);
+  align-items: center;
+}
+
+.loyalty-flow-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: clamp(132px, 13.2vw, 190px);
+  flex: 0 0 34.2%;
+  grid-template-columns: 34% 1fr;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 28px;
+  color: #fff;
+}
+
+.loyalty-flow-card + .loyalty-flow-card {
+  margin-left: -2.6%;
+}
+
+.loyalty-flow-card img,
+.page-loyalty .loyalty-flow-card img {
+  width: clamp(54px, 5.55vw, 80px);
+  height: clamp(54px, 5.55vw, 80px);
+  justify-self: center;
+  object-fit: contain;
+  border-radius: 0 !important;
+}
+
+.loyalty-flow-card h2,
+.loyalty-flow-card p {
+  margin: 0;
+  color: inherit;
+  letter-spacing: -0.04em;
+}
+
+.loyalty-flow-card h2 {
+  font-size: clamp(22px, 2.78vw, 40px);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.loyalty-flow-card p {
+  margin-top: clamp(8px, 1.1vw, 16px);
+  font-size: clamp(12px, 1.39vw, 20px);
+  line-height: 1.18;
+}
+
+.loyalty-flow-card-web {
+  background: #33a167;
+  transform: translateY(-5%) skewX(-1.26deg);
+}
+
+.loyalty-flow-card-entry {
+  z-index: 3;
+  background: #df2925;
+  transform: translateY(8%) skewX(-0.32deg);
+}
+
+.loyalty-flow-card-inside {
+  flex-basis: 35.8%;
+  background: #4dadd3;
+  transform: translateY(-9%) skewX(0.97deg);
+}
+
+@media (max-width: 720px) {
+  .page-loyalty .loyalty-flow-section {
+    padding: 18px 16px 24px;
+    border-radius: 16px;
+  }
+
+  .loyalty-flow-stage {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .loyalty-flow-heading {
+    height: 82px;
+  }
+
+  .loyalty-flow-heading h2 {
+    font-size: 27px;
+  }
+
+  .page-loyalty .loyalty-flow-arrow-left {
+    display: none;
+  }
+
+  .loyalty-flow-arrow-center {
+    top: 42px;
+    left: 48.7%;
+    width: 17px;
+  }
+
+  .page-loyalty .loyalty-flow-arrow-right {
+    display: none;
+  }
+
+  .loyalty-flow-card {
+    width: 100%;
+    height: 128px;
+    flex-basis: auto;
+    grid-template-columns: 34% 1fr;
+    border-radius: 16px;
+  }
+
+  .loyalty-flow-card + .loyalty-flow-card {
+    margin-top: -7px;
+    margin-left: 0;
+  }
+
+  .loyalty-flow-card img,
+  .page-loyalty .loyalty-flow-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .loyalty-flow-card h2 {
+    font-size: 26px;
+  }
+
+  .loyalty-flow-card p {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .loyalty-flow-card-web {
+    transform: skewX(-1deg);
+  }
+
+  .loyalty-flow-card-entry {
+    width: 94%;
+    transform: rotate(-4.5deg) skewX(-0.3deg);
+  }
+
+  .loyalty-flow-card-inside {
+    transform: skewX(0.8deg);
+  }
+}
+
 /* Unified dark-green color for the black UI blocks on the portfolio hero. */
 :root {
   --hero-dark-green: #315b43;
@@ -3978,12 +4181,29 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
   top: 300px;
   z-index: 3;
   height: 275px;
-  background: linear-gradient(155.46deg, rgb(20, 43, 59) 11.84%, rgb(4, 9, 18) 103.66%);
+  background: #285b78;
   content: "";
 }
 
+.weather-rain-backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 300px;
+  z-index: 4;
+  display: block;
+  width: 100%;
+  height: 275px;
+  max-width: none;
+  background: #285b78;
+  object-fit: cover;
+  object-position: center;
+  isolation: isolate;
+  pointer-events: none;
+}
+
 .weather-card .tag {
-  z-index: 5;
+  z-index: 6;
   left: 10px;
   top: 14px;
   min-height: 25px;
@@ -4126,7 +4346,7 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 }
 
 .weather-phone-rain {
-  z-index: 4;
+  z-index: 5;
   left: 50%;
   top: 354px;
   transform: translateX(-50%) scale(0.87);
@@ -7324,6 +7544,97 @@ body.portfolio-alt-hover .portfolio-alt-background {
 
   .page-design-system .design-system-textrow + .design-system-templates {
     padding-top: 18px;
+  }
+}
+
+/* Loyalty final screens — exact composition from Figma node 443:23. */
+.page-loyalty .loyalty-flow-section + .loyalty-text-section {
+  padding-top: 104px;
+}
+
+@media (max-width: 720px) {
+  .page-loyalty .loyalty-flow-section + .loyalty-text-section {
+    padding-top: 72px;
+  }
+}
+
+.page-loyalty .loyalty-shot-final.loyalty-final-flow {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 64px;
+  padding: 74px !important;
+  overflow: hidden !important;
+  border-radius: 40px !important;
+  background: #323232 !important;
+}
+
+.page-loyalty .loyalty-final-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
+  width: 100%;
+}
+
+.page-loyalty .loyalty-final-screen {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 341 / 720;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #fff;
+  clip-path: inset(0 round 17px);
+}
+
+.page-loyalty .loyalty-shot-final .loyalty-final-screen img {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  object-fit: fill;
+  border: 0;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  transform: none;
+}
+
+.page-loyalty .loyalty-final-screen-account img {
+  top: -177.3%;
+}
+
+.page-loyalty .loyalty-final-screen-referral img {
+  top: -19.03%;
+  left: -0.02%;
+  width: 100.05%;
+}
+
+.page-loyalty .loyalty-final-screen-quests img {
+  top: -9.28%;
+  left: -0.02%;
+  width: 100.04%;
+}
+
+.page-loyalty .loyalty-final-screen-partners img {
+  top: -9.12%;
+}
+
+@media (max-width: 720px) {
+  .page-loyalty .loyalty-shot-final.loyalty-final-flow {
+    display: block;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .page-loyalty .loyalty-final-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .page-loyalty .loyalty-final-screen {
+    border-radius: 6px;
+    clip-path: inset(0 round 6px);
   }
 }
 
