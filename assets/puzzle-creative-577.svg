@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="273" height="274" viewBox="0 0 273 274" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Union" d="M136.5 1.5C157.333 1.5 174.608 16.7371 177.89 36.7051C194.283 24.9129 217.234 26.407 231.961 41.1895C246.689 55.973 248.173 79.0084 236.419 95.459C256.324 98.752 271.5 116.099 271.5 137C271.5 157.901 256.324 175.247 236.419 178.54C248.173 194.99 246.69 218.027 231.962 232.811C217.234 247.593 194.283 249.086 177.89 237.294C174.609 257.262 157.334 272.5 136.5 272.5C115.666 272.5 98.3903 257.262 95.1094 237.294C78.7164 249.086 55.7663 247.593 41.0391 232.811C26.3106 218.027 24.8259 194.991 36.5801 178.54C16.6753 175.247 1.50001 157.901 1.5 137C1.5 116.099 16.6752 98.7524 36.5801 95.459C24.8264 79.0084 26.3108 55.9729 41.0391 41.1895C55.7662 26.4072 78.7165 24.9134 95.1094 36.7051C98.3907 16.737 115.667 1.5 136.5 1.5Z" fill="url(#paint0_radial_0_12)" fill-opacity="0.6" stroke="#1FC9FA" stroke-width="3" stroke-linecap="round"/>
+<defs>
+<radialGradient id="paint0_radial_0_12" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.5 137) rotate(90.2535) scale(113.001 112.579)">
+<stop stop-color="white"/>
+<stop offset="0.458228" stop-color="#E8F9FF"/>
+<stop offset="0.599375" stop-color="#D2F4FE"/>
+<stop offset="0.734279" stop-color="#B2ECFE"/>
+<stop offset="0.911162" stop-color="#70DEFF"/>
+</radialGradient>
+</defs>
+</svg>

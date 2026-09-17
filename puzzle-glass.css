@@ -1,0 +1,29 @@
+/* Figma 584:172: geometry in the 1392px hero coordinate system. */
+@media (min-width: 721px) {
+  .page-portfolio .portfolio-intro .puzzle-layer {
+    width: 1392px; height: 504px; inset: auto; left: 50%; top: 0;
+    transform: translateX(-50%) scale(var(--puzzle-scale, 1));
+    transform-origin: center center;
+  }
+  .page-portfolio .portfolio-intro .puzzle-piece { zoom: 1; right: auto; }
+  .page-portfolio .portfolio-intro .puzzle-piece-black {
+    left: -37.47px; top: -44.11px;
+    --piece-w: 326.998px; --piece-h: 337.076px;
+    --shape-left: 31.19px; --shape-top: 47.59px;
+    --text-x: 154.19px; --text-y: 174.86px;
+  }
+  .page-portfolio .portfolio-intro .puzzle-piece-orange {
+    left: 10px; top: 215px;
+    --piece-w: 274px; --piece-h: 264px;
+    --shape-w: 280px; --shape-h: 270px; --shape-left: -3px; --shape-top: -3px;
+    --text-x: 143.97px; --text-y: 149.52px; --text-rotate: 7.21deg;
+  }
+  .page-portfolio .portfolio-intro .puzzle-piece-green {
+    left: 1107px; top: 3px;
+    --text-x: 136.34px; --text-y: 135.9px;
+  }
+  .page-portfolio .portfolio-intro .puzzle-piece-gray {
+    left: 1143px; top: 221px;
+    --text-x: 134px; --text-y: 134px;
+  }
+}

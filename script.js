@@ -41,14 +41,36 @@ function normalizePage(page) {
   return page === "photos" || PROJECT_PAGES.includes(page) ? page : DEFAULT_PAGE;
 }
 
-function showPage(page) {
+let pageTransitionRun = 0;
+let pageContentAnimation;
+
+async function showPage(page) {
   const nextPage = normalizePage(page);
+  const run = ++pageTransitionRun;
+  pageContentAnimation?.cancel();
+  const previousPanel = panels.find(panel => panel.classList.contains("active"));
+  const nextPanel = panels.find(panel => panel.dataset.pagePanel === nextPage);
+  const animateContent = previousPanel && previousPanel !== nextPanel &&
+    !PROJECT_PAGES.includes(previousPanel.dataset.pagePanel) &&
+    !PROJECT_PAGES.includes(nextPage) &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isProjectPage = PROJECT_PAGES.includes(nextPage);
   const activeSegmentPage = isProjectPage ? DEFAULT_PAGE : nextPage;
+  const slideDirection = nextPage === "photos" ? 1 : -1;
 
   buttons.forEach((button) => {
     button.classList.toggle("active", button.dataset.page === activeSegmentPage);
   });
+
+  if (animateContent) {
+    pageContentAnimation = previousPanel.animate([
+      { opacity: 1, transform: "translateX(0)" },
+      { opacity: 0, transform: `translateX(${-12 * slideDirection}px)` },
+    ], { duration: 110, easing: "cubic-bezier(0.4, 0, 1, 1)", fill: "forwards" });
+    try { await pageContentAnimation.finished; } catch { return; }
+    if (run !== pageTransitionRun) return;
+    pageContentAnimation.cancel();
+  }
 
   panels.forEach((panel) => {
     panel.classList.toggle("active", panel.dataset.pagePanel === nextPage);
@@ -57,12 +79,20 @@ function showPage(page) {
   segment?.classList.toggle("is-hidden", isProjectPage);
   document.body.classList.toggle("project-page-active", isProjectPage);
   document.body.classList.toggle("loyalty-page-active", nextPage === "loyalty-program");
+  document.dispatchEvent(new Event('page-layout-change'));
 
   if (window.location.hash !== `#${nextPage}`) {
     history.replaceState(null, "", `#${nextPage}`);
   }
 
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
+  if (animateContent) {
+    pageContentAnimation = nextPanel.animate([
+      { opacity: 0, transform: `translateX(${24 * slideDirection}px)` },
+      { opacity: 1, transform: "translateX(0)" },
+    ], { duration: 300, easing: "cubic-bezier(0.16, 1, 0.3, 1)" });
+  }
 }
 
 function initNavigation() {
@@ -329,10 +359,120 @@ function initStickyHeaderThreshold() {
   window.addEventListener("hashchange", updateHeaderPosition);
 }
 
+// Reserve the same text height on both landing screens so the greeting stays put.
+function initPhotosIntroPosition() {
+  const reference = document.querySelector('.page-portfolio .intro-copy > p');
+  const copy = document.querySelector('.photos-hero .intro-copy');
+  const paragraph = copy?.querySelector('p');
+  if (!reference || !paragraph) return;
+
+  const measure = reference.cloneNode(true);
+  measure.setAttribute('aria-hidden', 'true');
+  Object.assign(measure.style, {
+    position: 'absolute',
+    visibility: 'hidden',
+    pointerEvents: 'none',
+    height: 'auto',
+    top: '0',
+    left: '0',
+    right: '0',
+  });
+  copy.append(measure);
+
+  const sync = () => {
+    if (!copy.getBoundingClientRect().width) return;
+    paragraph.style.height = `${measure.getBoundingClientRect().height}px`;
+  };
+  new ResizeObserver(sync).observe(copy);
+  document.addEventListener('page-layout-change', sync);
+  document.fonts.ready.then(sync);
+  sync();
+}
+
 initTypography();
+initPhotosIntroPosition();
 initNavigation();
 initProjectCursor();
 initIntroPuzzles();
 initCoverVideoPlaybackRates();
 initDeferredMedia();
 initStickyHeaderThreshold();
+
+// Photos greeting: repeat the camera sequence during hover or keyboard focus.
+function initPhotosGreeting() {
+  const title = document.querySelector(".page-photos .hello-title");
+  const portrait = title?.querySelector(".hello-photo");
+  if (!portrait) return;
+  const sources = [
+    "portrait-look-right-20260825.svg",
+    "photos-camera-1.svg", "photos-camera-2.svg",
+    ...Array.from({ length: 7 }, (_, i) => `photos-flash-${i + 1}.svg`),
+    "portrait-look-right-20260825.svg",
+  ];
+  const frames = sources.map((source) => {
+    const image = new Image();
+    image.className = "hello-photo-pixel photos-camera-frame";
+    image.alt = "";
+    image.src = `assets/${source}`;
+    portrait.append(image);
+    return image;
+  });
+  const ready = Promise.all(frames.map(image => image.decode()));
+  ready.catch(() => {});
+  const durations = [360, 200, 240, 95, 95, 95, 95, 95, 95, 120, 220];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let timer;
+  let generation = 0;
+  let active = false;
+  const show = index => frames.forEach((frame, i) => frame.classList.toggle("is-current", i === index));
+  const stop = () => {
+    generation++;
+    active = false;
+    clearTimeout(timer);
+    title.classList.remove("photos-camera-active");
+    show(-1);
+  };
+  const start = async () => {
+    if (active) return;
+    active = true;
+    const run = ++generation;
+    try { await ready; } catch { if (run === generation) stop(); return; }
+    if (run !== generation) return;
+    title.classList.add("photos-camera-active");
+    show(0);
+    if (reducedMotion.matches) return;
+    const advance = index => {
+      if (run !== generation) return;
+      show(index);
+      timer = setTimeout(() => {
+        if (index + 1 < frames.length) advance(index + 1);
+        else advance(0);
+      }, durations[index]);
+    };
+    advance(0);
+  };
+  title.addEventListener("mouseenter", start);
+  title.addEventListener("mouseleave", () => {
+    if (!title.matches(":focus-visible")) stop();
+  });
+  title.addEventListener("focusin", start);
+  title.addEventListener("focusout", () => {
+    if (!title.matches(":hover")) stop();
+  });
+  window.addEventListener("hashchange", stop);
+}
+initPhotosGreeting();
+
+// Sample each lower original SVG inside the upper glass silhouette. This also
+// works on file://, where external CSS masks/backdrop sampling can be blocked.
+function initPuzzleLayout() {
+  const layer = document.querySelector('.page-portfolio .portfolio-intro .puzzle-layer');
+  if (!layer) return;
+  const update = () => {
+    layer.style.setProperty('--puzzle-scale', Math.min(1, (window.innerWidth - 48) / 1392));
+  };
+  window.addEventListener('resize', update);
+  document.addEventListener('page-layout-change', update);
+  update();
+}
+initPuzzleLayout();
