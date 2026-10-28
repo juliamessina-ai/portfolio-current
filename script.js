@@ -180,11 +180,17 @@ function initProjectCursor() {
 }
 
 function initIntroPuzzles() {
-  const introPuzzlesEnabled = true;
+  const introPuzzlesEnabled = false;
   const portfolioIntro = document.querySelector(".portfolio-intro");
   const helloTitle = document.querySelector(".hello-title");
 
-  if (!introPuzzlesEnabled || !portfolioIntro || !helloTitle) return;
+  if (!portfolioIntro || !helloTitle) return;
+  if (!introPuzzlesEnabled) {
+    const puzzleLayer = portfolioIntro.querySelector(".puzzle-layer");
+    if (puzzleLayer) puzzleLayer.hidden = true;
+    portfolioIntro.classList.remove("puzzles-enter", "puzzles-visible", "puzzles-leave");
+    return;
+  }
 
   let puzzleLeaveTimer;
 

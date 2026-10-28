@@ -1,29 +1,99 @@
-/* Figma 584:172: geometry in the 1392px hero coordinate system. */
+/* Hover composition from Figma 626:5; text uses its existing layout. */
 @media (min-width: 721px) {
+  .page-portfolio .portfolio-intro .intro-copy > p {
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 400ms ease, filter 520ms ease;
+  }
+  .page-portfolio .portfolio-intro.puzzles-visible .intro-copy > p {
+    opacity: 0;
+    filter: blur(10px);
+  }
   .page-portfolio .portfolio-intro .puzzle-layer {
-    width: 1392px; height: 504px; inset: auto; left: 50%; top: 0;
+    z-index: 3;
+    width: 1392px;
+    height: 504px;
+    inset: auto;
+    left: 50%;
+    top: 0;
     transform: translateX(-50%) scale(var(--puzzle-scale, 1));
-    transform-origin: center center;
+    transform-origin: center;
   }
-  .page-portfolio .portfolio-intro .puzzle-piece { zoom: 1; right: auto; }
-  .page-portfolio .portfolio-intro .puzzle-piece-black {
-    left: -37.47px; top: -44.11px;
-    --piece-w: 326.998px; --piece-h: 337.076px;
-    --shape-left: 31.19px; --shape-top: 47.59px;
-    --text-x: 154.19px; --text-y: 174.86px;
+  .page-portfolio .portfolio-intro .meme-piece {
+    transition: transform 850ms cubic-bezier(.25, .65, .3, 1);
+    transition-delay: 0ms;
+    zoom: 1;
+    right: auto;
+    top: 0;
+    --rotate: 0deg;
+    --piece-w: 354px;
+    --piece-h: 483px;
   }
-  .page-portfolio .portfolio-intro .puzzle-piece-orange {
-    left: 10px; top: 215px;
-    --piece-w: 274px; --piece-h: 264px;
-    --shape-w: 280px; --shape-h: 270px; --shape-left: -3px; --shape-top: -3px;
-    --text-x: 143.97px; --text-y: 149.52px; --text-rotate: 7.21deg;
+  .page-portfolio .portfolio-intro .meme-piece-left {
+    transform-origin: left center;
+    left: 41.99px;
+    --slide-from: -480px;
+    --spin-from: -42deg;
+    --piece-delay: 20ms;
+    --piece-leave-delay: 65ms;
   }
-  .page-portfolio .portfolio-intro .puzzle-piece-green {
-    left: 1107px; top: 3px;
-    --text-x: 136.34px; --text-y: 135.9px;
+  .page-portfolio .portfolio-intro .meme-piece-right {
+    transform-origin: right center;
+    left: 928.91px;
+    --slide-from: 480px;
+    --spin-from: -38deg;
+    --piece-delay: 45ms;
+    --piece-leave-delay: 45ms;
   }
-  .page-portfolio .portfolio-intro .puzzle-piece-gray {
-    left: 1143px; top: 221px;
-    --text-x: 134px; --text-y: 134px;
+  .page-portfolio .portfolio-intro .meme-picture {
+    scale: var(--meme-start-scale);
+    transition: scale 850ms cubic-bezier(.25, .65, .3, 1);
+  }
+  .meme-piece-left .meme-picture { transform-origin: left bottom; --meme-start-scale: .872; }
+  .meme-piece-right .meme-picture { transform-origin: right top; --meme-start-scale: .788; }
+  .page-portfolio .portfolio-intro.puzzles-visible .meme-picture {
+    scale: 1;
+    transition-delay: var(--piece-delay, 0ms);
+  }
+  .page-portfolio .portfolio-intro.puzzles-leave .meme-picture {
+    transition-delay: var(--piece-leave-delay, 0ms);
+  }
+  .page-portfolio .portfolio-intro .meme-caption,
+  .page-portfolio .portfolio-intro .meme-arrow {
+    translate: var(--slide-from) 0;
+    opacity: 0;
+    transition: translate 680ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease;
+  }
+  .page-portfolio .portfolio-intro.puzzles-visible .meme-caption,
+  .page-portfolio .portfolio-intro.puzzles-visible .meme-arrow {
+    translate: 0 0;
+    opacity: 1;
+    transition-delay: 90ms;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .page-portfolio .portfolio-intro .intro-copy > p,
+  .page-portfolio .portfolio-intro .meme-piece,
+  .page-portfolio .portfolio-intro .meme-picture,
+  .page-portfolio .portfolio-intro .meme-caption,
+  .page-portfolio .portfolio-intro .meme-arrow {
+    transition: none;
+  }
+}
+.meme-piece::before { content: none; }
+.meme-piece img { position: absolute; display: block; max-width: none; object-fit: contain; }
+.meme-piece-left .meme-picture { left: 0; top: -1.71px; width: 405.403px; height: 415.938px; }
+.meme-piece-right .meme-picture { left: 0; top: 156.35px; width: 449.484px; height: 404.614px; }
+.meme-caption {
+  position: absolute;
+  color: #b4b4b4;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: .92;
+  letter-spacing: -1.12px;
+  text-align: center;
+}
+.meme-piece-left .meme-caption { left: 425px; top: 396px; width: 154.64px; transform: rotate(-8.19deg); }
+.meme-piece-right .meme-caption { left: 30.137px; top: 63.04px; width: 121.086px; transform: rotate(2.68deg); }
+.meme-piece-left .meme-arrow { left: 322px; top: 417px; width: 130px; height: 89.959px; transform: rotate(-30deg); }
+.meme-piece-right .meme-arrow { left: 172.09px; top: 77.88px; width: 103.989px; height: 82px; transform: rotate(180deg); }

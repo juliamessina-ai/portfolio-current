@@ -806,6 +806,7 @@ main {
   padding: 32px var(--page-pad) 96px;
 }
 
+
 .page.active {
   display: block;
 }
@@ -2761,8 +2762,39 @@ main {
   transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.hello-title:hover .hello-text {
+.hello-title:hover .hello-text,
+.hello-title:focus-visible .hello-text {
   transform: rotateX(180deg);
+}
+
+/* Decorative siblings share the greeting's flip, without covering its copy. */
+.intro-flip-tiles { position: absolute; inset: 0; pointer-events: none; }
+.intro-flip-tile { position: absolute; width: 76px; height: 73px; perspective: 700px; }
+.intro-flip-tile:nth-child(1) { left: 12%; top: 28px; transform: rotate(-11deg); }
+.intro-flip-tile:nth-child(2) { right: 15%; top: 44px; transform: rotate(8deg); }
+.intro-flip-tile:nth-child(3) { left: 22%; bottom: 28px; transform: rotate(7deg); }
+.intro-flip-tile:nth-child(4) { right: 10%; bottom: 36px; transform: rotate(-9deg); }
+.intro-flip-tile:nth-child(5) { left: 0; top: calc(50% - 100px); transform: rotate(-6deg); }
+.intro-flip-tile:nth-child(6) { right: 0; top: calc(50% - 100px); transform: rotate(12deg); }
+.intro-flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1); }
+.intro-tile-front, .intro-tile-back { position: absolute; inset: 0; display: grid; place-items: center; border-radius: 24px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.intro-tile-front { background: var(--bg); }
+.intro-tile-back { background: #fff; transform: rotateX(180deg); }
+.intro-tile-back svg { width: 58px; height: 58px; fill: none; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; filter: invert(1); }
+.page-portfolio .portfolio-intro:has(.hello-title:hover, .hello-title:focus-visible) .intro-flip-inner { transform: rotateX(180deg); }
+@media (max-width: 720px) {
+  .intro-flip-tile { width: 48px; height: 47px; }
+  .intro-tile-front, .intro-tile-back { border-radius: 15px; }
+  .intro-tile-back svg { width: 38px; height: 38px; }
+  .intro-flip-tile:nth-child(1) { left: 6%; top: 12px; }
+  .intro-flip-tile:nth-child(2) { right: 8%; top: 20px; }
+  .intro-flip-tile:nth-child(3) { left: 15%; bottom: 12px; }
+  .intro-flip-tile:nth-child(4) { right: 6%; bottom: 18px; }
+  .intro-flip-tile:nth-child(5) { left: 0; top: 78px; }
+  .intro-flip-tile:nth-child(6) { right: 0; top: 78px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-flip-inner { transition: none; }
 }
 
 body.portfolio-alt-hover .hello-text {
@@ -2778,6 +2810,7 @@ body.portfolio-alt-hover .hello-text {
   padding: 12px 16px 8px;
   border-radius: 24px;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
 }
@@ -2785,12 +2818,13 @@ body.portfolio-alt-hover .hello-text {
 .hello-text-front {
   background: #fff;
   color: #000;
+  transform: translateZ(1px);
 }
 
 .hello-text-back {
   background-color: #000;
   color: #fff;
-  transform: rotateX(180deg);
+  transform: rotateX(180deg) translateZ(1px);
 }
 
 .hello-photo {
@@ -4225,19 +4259,31 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 .pomodoro-card {
   grid-column: 2 / 4;
   grid-row: 1;
-  border-radius: 22px;
   background: #fff;
 }
 
 .pomodoro-card .tag {
-  left: 14px;
-  top: 15px;
-  min-height: 25px;
-  border-radius: 8px;
-  padding: 6px 6px 4px;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  left: 0;
+  top: 0;
+  border: 0;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: linear-gradient(90deg, #f5c9c9 0%, #f2baba 100%);
+  color: #000;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 1.29;
+  letter-spacing: -1.28px;
+}
+
+.pomodoro-tag-lettering {
+  display: block;
+  overflow: visible;
+  flex: none;
+  font-family: "Istok Web", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -1.28px;
 }
 
 .pomodoro-video-frame {
@@ -4302,16 +4348,38 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 
 .weather-card .tag {
   z-index: 6;
-  left: 10px;
-  top: 14px;
-  min-height: 25px;
-  border-radius: 8px;
-  padding: 6px 6px 4px;
-  background: #c6a0dd;
+  left: 0;
+  top: 0;
+  border: 0;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: linear-gradient(90deg, #cbdff3 0%, #b9d4ef 100%);
   color: #000;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  box-shadow: none;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.29;
+  letter-spacing: -1.28px;
+}
+
+.weather-card .tag::before {
+  content: none;
+  position: absolute;
+  width: 369px;
+  height: 246px;
+  left: -124px;
+  top: -21px;
+  background: linear-gradient(rgb(0 0 0 / 10%), rgb(0 0 0 / 10%)), url("assets/tag-weather-checks.png") center / cover;
+  pointer-events: none;
+}
+
+.weather-tag-label {
+  position: relative;
+  display: block;
+  height: 21px;
+  white-space: pre;
+  -webkit-text-stroke: 0;
+  paint-order: stroke fill;
 }
 
 .black-card {
@@ -4446,7 +4514,7 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 .weather-phone-rain {
   z-index: 5;
   left: 50%;
-  top: 354px;
+  top: 338px;
   transform: translateX(-50%) scale(0.87);
 }
 
@@ -4612,6 +4680,18 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 
 .case-card {
   min-width: 0;
+}
+
+.page-portfolio .case-grid .case-card:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-portfolio .case-grid .case-card > .case-image {
+  order: -1;
+  flex-shrink: 0;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .case-image {
@@ -7403,7 +7483,14 @@ body.portfolio-alt-hover .portfolio-alt-background {
 /* Mobile contact buttons keep their compact text labels. */
 @media (max-width: 720px) {
   .segment {
-    display: none;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    border-radius: 16px;
+    background: var(--bg);
   }
 
   .contacts .pill {

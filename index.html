@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260915-no-glass" />
-    <link rel="stylesheet" href="puzzle-glass.css?v=20260915-no-glass" />
+    <link rel="stylesheet" href="styles.css?v=20261028-captions-below" />
+    <link rel="stylesheet" href="puzzle-glass.css?v=20260924-memes-11" />
   </head>
   <body>
     <header class="site-header" aria-label="Основная навигация">
@@ -67,6 +67,14 @@
           </video>
         </div>
         <section class="intro portfolio-intro" aria-labelledby="portfolio-title">
+          <div class="intro-flip-tiles" aria-hidden="true" hidden>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="M13 29 12 12 26 21Q33 18 40 22L53 13 51 33Q55 52 33 54 12 54 13 29Z" fill="white"/><path d="M23 33v4m19-4v4m-13 6 4 3 4-3M15 40 7 38m8 7-8 2m42-7 8-2m-8 7 8 2" stroke="black"/></svg></span></div></div>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="M27 24C13 9 35 1 37 20 49 7 62 25 43 30 61 35 47 53 37 40 34 58 15 52 23 37 5 40 5 19 27 24Z" fill="white"/><circle cx="32" cy="30" r="7" stroke="black"/><path d="M32 46v13m0-5 10-5" stroke="white"/></svg></span></div></div>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="M13 27h32v14Q44 53 29 53 14 53 13 41Z" fill="white"/><path d="M46 29q17-2 10 13-4 5-11 2M11 57h39M23 20q-7-5 0-12m12 12q-7-5 0-12" stroke="white"/><path d="M24 36v3m11-3v3m-11 6q5 4 10 0" stroke="black"/></svg></span></div></div>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="m32 7 7 17 19 3-14 13 3 19-16-10-17 8 4-18L5 25l19-1Z" fill="white"/><path d="M25 30v4m13-4v4m-13 7q6 5 12 0" stroke="black"/></svg></span></div></div>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="M32 53C23 47 8 36 9 23 10 10 25 9 32 21 39 8 55 11 55 24 55 36 41 47 32 53Z" fill="white"/><path d="M25 28v4m14-4v4m-14 7q7 6 14 0" stroke="black"/></svg></span></div></div>
+            <div class="intro-flip-tile"><div class="intro-flip-inner"><span class="intro-tile-front"></span><span class="intro-tile-back"><svg viewBox="0 0 64 64"><path d="M14 23h10l4-7h12l4 7h7q5 0 5 6v19q0 5-5 5H14q-6 0-6-5V29q0-6 6-6Z" fill="white"/><circle cx="33" cy="37" r="10" stroke="black"/><path d="M29 34q4-4 8 0" stroke="black"/><circle cx="48" cy="29" r="2" fill="black"/></svg></span></div></div>
+          </div>
           <div class="intro-copy">
             <h1 id="portfolio-title" class="hello-title" tabindex="0">
               <span class="hello-text">
@@ -91,12 +99,16 @@
             <img loading="lazy" decoding="async" class="portfolio-alt-signal" src="assets/portfolio-alt-signal.svg" alt="" aria-hidden="true" />
           </div>
           <div class="puzzle-layer" aria-hidden="true">
-            <div class="puzzle-piece puzzle-piece-black"><span class="puzzle-label">trash</span></div>
-            <div class="puzzle-piece puzzle-piece-orange"><span class="puzzle-label">beauty</span></div>
-            <div class="puzzle-piece puzzle-piece-green">
-              <span class="puzzle-label">think</span>
+            <div class="puzzle-piece meme-piece meme-piece-left">
+              <img class="meme-picture" src="assets/hover-meme-days-hq.png" alt="" />
+              <span class="meme-caption">любимый<br />мем раз</span>
+              <img class="meme-arrow" src="assets/hover-meme-arrow-left-final.svg" alt="" />
             </div>
-            <div class="puzzle-piece puzzle-piece-gray"><span class="puzzle-label">creative</span></div>
+            <div class="puzzle-piece meme-piece meme-piece-right">
+              <img class="meme-picture" src="assets/hover-meme-life-hq.png" alt="" />
+              <span class="meme-caption">любимый<br />мем два</span>
+              <img class="meme-arrow" src="assets/hover-meme-arrow-right-final.svg" alt="" />
+            </div>
           </div>
         </section>
 
@@ -109,7 +121,7 @@
 
             <div class="challenge-grid">
               <article class="challenge-card weather-card">
-                <span class="tag tag-pink">Weather widget</span>
+                <span class="tag tag-pink"><span class="weather-tag-label">Weather widget </span></span>
                 <div class="weather-phone weather-phone-sun" aria-label="Анимированный солнечный виджет в мокапе телефона">
                   <span class="weather-phone-button weather-phone-mute" aria-hidden="true"></span>
                   <span class="weather-phone-button weather-phone-volume-up" aria-hidden="true"></span>
@@ -139,7 +151,7 @@
                     </svg>
                   </div>
                 </div>
-                <img loading="lazy" decoding="async" class="weather-rain-backdrop" src="assets/weather-rain-backdrop-20260826.png?v=2" alt="" aria-hidden="true" />
+                <img loading="lazy" decoding="async" class="weather-rain-backdrop" src="assets/weather-rain-backdrop-20260928.jpg" alt="" aria-hidden="true" />
                 <div class="weather-phone weather-phone-rain" aria-label="Анимированный дождевой виджет в мокапе телефона">
                   <span class="weather-phone-button weather-phone-mute" aria-hidden="true"></span>
                   <span class="weather-phone-button weather-phone-volume-up" aria-hidden="true"></span>
@@ -173,7 +185,20 @@
                 </div>
               </article>
               <article class="challenge-card pomodoro-card" aria-label="Pomodoro timer">
-                <span class="tag tag-mint">Pomodoro timer</span>
+                <span class="tag tag-mint">
+                  <svg class="pomodoro-tag-lettering" width="113" height="21" viewBox="0 0 113 21" role="img" aria-label="Pomodoro + to do">
+                    <defs>
+                      <linearGradient id="pomodoro-tag-outline" gradientUnits="userSpaceOnUse" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="scale(113 21) matrix(1.137168 -2.238095 0.077297 1.137168 -0.220064 0.431416)">
+                        <stop offset="0" stop-color="rgb(100% 22.8113% 22.4234%)" />
+                        <stop offset="0.288646" stop-color="rgb(85.4596% 24.4451% 24.1385%)" />
+                        <stop offset="0.515183" stop-color="rgb(74.0479% 25.7274% 25.4845%)" />
+                        <stop offset="0.785176" stop-color="rgb(80.5185% 33.3145% 33.0773%)" />
+                        <stop offset="1" stop-color="rgb(95.6825% 51.0949% 50.8708%)" />
+                      </linearGradient>
+                    </defs>
+                    <text x="0" y="16" fill="black" stroke="none">Pomodoro + to do</text>
+                  </svg>
+                </span>
                 <div class="pomodoro-video-frame">
                   <video data-src="assets/pomodoro-timer.mp4" muted loop playsinline preload="none"></video>
                 </div>
@@ -765,6 +790,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260915-no-glass"></script>
+    <script src="script.js?v=20261013-remove-play"></script>
   </body>
 </html>
