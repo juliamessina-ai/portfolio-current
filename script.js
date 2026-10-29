@@ -121,7 +121,7 @@ function initNavigation() {
 
 function initProjectCursor() {
   const projectCursor = document.querySelector(".project-cursor");
-  const projectTargets = document.querySelectorAll(".case-card[data-project], .challenge-card");
+  const projectTargets = document.querySelectorAll(".case-card[data-project], .challenge-card, .case-card:has(.case-sustainability-cover)");
 
   if (!projectCursor) return;
 
@@ -161,7 +161,10 @@ function initProjectCursor() {
 
   projectTargets.forEach((target) => {
     target.addEventListener("mouseenter", (event) => {
-      target.classList.add("project-hover");
+      const comingSoon = !target.hasAttribute("data-project");
+      target.classList.toggle("project-hover", !comingSoon);
+      projectCursor.classList.toggle("coming-soon", comingSoon);
+      projectCursor.querySelector(".project-cursor-label").textContent = comingSoon ? "coming soon..." : "Подробнее";
       isCursorVisible = true;
       cursorPosition.x = event.clientX - (projectCursor.offsetWidth || 122) / 2;
       cursorPosition.y = event.clientY - 40;

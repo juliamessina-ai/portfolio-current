@@ -658,6 +658,21 @@ a {
   opacity: 1;
 }
 
+body .project-cursor.coming-soon {
+  background: rgba(145, 145, 145, .9);
+  width: auto;
+  justify-content: center;
+}
+
+.project-cursor.coming-soon .project-cursor-icon {
+  display: none;
+}
+
+.case-card:has(.case-sustainability-cover),
+.case-card:has(.case-sustainability-cover) * {
+  cursor: default;
+}
+
 .project-cursor-label {
   display: inline-flex;
   align-items: center;
@@ -4243,11 +4258,13 @@ body.portfolio-alt-hover .hello-photo .hello-photo-wave {
 
 .case-card[data-project],
 .case-card[data-project] *,
-.challenge-card,
-.challenge-card *,
-.case-card[data-project].project-hover,
-.challenge-card.project-hover {
+.case-card[data-project].project-hover {
   cursor: pointer;
+}
+
+.challenge-card,
+.challenge-card * {
+  cursor: default;
 }
 
 .phone-card {
